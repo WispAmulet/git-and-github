@@ -5,13 +5,18 @@
 
   <b>2.在github上创建一个repository</b> <br> 注意：名字最好为英文
 
-  <b>3.打开git客户端</b>，首次登陆使用 <br><br>
+  <b>3.打开git客户端</b>，首次登陆使用 <br>
+  <pre>
   $ git config --global user.name "your user name" <br>
   $ git config --global user.email "your email address"
+  </pre>
 
 <b>4.设置SSH key</b> <br><br>
-  可以在C:\Users\your name\.ssh中找到SSH key，没有的话使用 <br><br>
-  $ ssh-keygen -t rsa -C "your email address" <br><br>
+  可以在C:\Users\your name\.ssh中找到SSH key，没有的话使用
+  <pre>
+  $ ssh-keygen -t rsa -C "your email address"
+  </pre>
+  
   生成key。然后用记事本打开id_rsa.pub <br>
   
 <b>5.为github配置SSH key</b> <br><br>
@@ -22,28 +27,35 @@
 
 <b>7.建立本地仓库</b> <br><br>
   打开git界面使用 $ cd 命令切换到项目目录的地址 <br>
-  或者直接在项目目录中右键 Git Bash Here <br><br>
-  
-  $ git init <br>
-  项目中多了一个.git隐藏文件夹 <br>  
-  $ git add . <br>
-  将所有文件添加到仓库 <br>  
-  $ git commit -m "your commit" <br>
-  把文件提交到仓库 <br>
+  或者直接在项目目录中右键 Git Bash Here
+  <pre>
+  $ git init
+  项目中多了一个.git隐藏文件夹<br>
+  $ git add .
+  将所有文件添加到仓库<br>
+  $ git commit -m "your commit"
+  把文件提交到仓库
+  </pre>
   
 <b>8.关联github仓库</b> <br><br>
-  在之前创建的repo中找到SSH地址 <br><br>
+  在之前创建的repo中找到SSH地址 <br>
+  <pre>
   $ git remote add origin git@github.com:your ID/your repo name.git
+  </pre>
   
-<b>9.上传本地文件</b> <br><br>
-  git push -u origin master <br> 
+<b>9.上传本地文件</b> <br>
+<pre>
+git push -u origin master
+</pre>
   注意：空文件夹不会显示
   
 <b>10.如何更新项目</b> <br><br>
-  在本地项目中创建一个文件 <br><br>
-  $ git add . <br>
-  $ git commit -m "add a file" <br>
-  $ git push -u origin master <br>
+  在本地项目中创建一个文件 
+  <pre>
+  $ git add .
+  $ git commit -m "add a file"
+  $ git push -u origin master
+  </pre>
   
 <b>其它：</b> <br> git默认对文件大小写不敏感，使用
      $ git config core.ignorecase false

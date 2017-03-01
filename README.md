@@ -1,18 +1,18 @@
 # git-and-github
 如何使用git上传项目到github
 
-  <b>1.安装git客户端</b> <br> <a href="https://git-scm.com/">https://git-scm.com/</a>
+<b>1.安装git客户端</b> <br> <a href="https://git-scm.com/">https://git-scm.com/</a>
 
-  <b>2.在github上创建一个repository</b> <br> 注意：名字最好为英文
+<b>2.在github上创建一个repository</b> <br> 注意：名字最好为英文
 
-  <b>3.打开git客户端</b>，首次登陆使用 <br>
+<b>3.打开git客户端</b>，首次登陆使用 <br>
   <pre>
   $ git config --global user.name "your user name" <br>
   $ git config --global user.email "your email address"
   </pre>
 
 <b>4.设置SSH key</b> <br><br>
-  可以在C:\Users\your name\.ssh中找到SSH key，没有的话使用
+  可以在C:\Users\your user name\\.ssh中找到SSH key，没有的话使用
   <pre>
   $ ssh-keygen -t rsa -C "your email address"
   </pre>
@@ -44,9 +44,9 @@
   </pre>
   
 <b>9.上传本地文件</b> <br>
-<pre>
-git push -u origin master
-</pre>
+  <pre>
+  git push -u origin master
+  </pre>
   注意：空文件夹不会显示
   
 <b>10.如何更新项目</b> <br><br>
@@ -58,7 +58,9 @@ git push -u origin master
   </pre>
   
 <b>其它：</b> <br> git默认对文件大小写不敏感，使用
-     $ git config core.ignorecase false
+  <pre>
+  $ git config core.ignorecase false
+  </pre>
 
 参考资料：<br><a href="http://blog.csdn.net/ch1451082329/article/details/52780175">github入门到上传本地项目</a><br>
 <a href="http://www.tuicool.com/articles/AnimaaE">如何配置Git支持大小写敏感和修改文件名中大小写字母</a>

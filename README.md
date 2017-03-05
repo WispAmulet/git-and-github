@@ -54,7 +54,7 @@
   <pre>
   $ git add .
   $ git commit -m "add a file"
-  $ git push -u origin master
+  $ git push
   </pre>
   
 <b>其它：</b> <br> git默认对文件大小写不敏感，使用

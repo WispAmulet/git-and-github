@@ -50,9 +50,9 @@
   注意：空文件夹不会显示
   
 <b>10.如何更新项目</b> <br><br>
-  在本地项目中创建一个文件 
-  <pre>
-  $ git add .
+  在本地项目中创建一个文件，如 readme.txt
+  <pre>
+  $ git add readme.txt
   $ git commit -m "add a file"
   $ git push
   </pre>

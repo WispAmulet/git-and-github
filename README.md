@@ -65,4 +65,4 @@
 参考资料：<br><a href="http://blog.csdn.net/ch1451082329/article/details/52780175">github入门到上传本地项目</a><br>
 <a href="http://www.tuicool.com/articles/AnimaaE">如何配置Git支持大小写敏感和修改文件名中大小写字母</a>
 
-更多资料: <br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的Git教程</a><br><a href="https://my.oschina.net/u/1471093/blog/353710">Git学习版本回退和管理文件的修改及删除操作</a><br><a href="http://www.tuicool.com/articles/BJfUn2B">Git删除暂存区或版本库中的文件</a>
+更多资料: <br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的Git教程</a><br><a href="https://my.oschina.net/u/1471093/blog/353710">Git学习版本回退和管理文件的修改及删除操作</a><br><a href="http://www.tuicool.com/articles/BJfUn2B">Git删除暂存区或版本库中的文件</a><br><a href="https://segmentfault.com/q/1010000005900988">git commit -m 与 git commit -am 的区别</a>

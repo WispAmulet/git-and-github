@@ -74,15 +74,15 @@ git默认对文件大小写不敏感，使用
 
 - 参考资料：
 
-[github入门到上传本地项目](http://blog.csdn.net/ch1451082329/article/details/52780175)
+[github入门到上传本地项目](http://blog.csdn.net/ch1451082329/article/details/52780175)  
 [如何配置Git支持大小写敏感和修改文件名中大小写字母](http://www.tuicool.com/articles/AnimaaE)
 
 
 - 更多资料: 
 
-[廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
-[Git学习版本回退和管理文件的修改及删除操作](https://my.oschina.net/u/1471093/blog/353710)
-[Git删除暂存区或版本库中的文件](http://www.tuicool.com/articles/BJfUn2B)
-[git commit -m 与 git commit -am 的区别](https://segmentfault.com/q/1010000005900988)
+[廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)  
+[Git学习版本回退和管理文件的修改及删除操作](https://my.oschina.net/u/1471093/blog/353710)  
+[Git删除暂存区或版本库中的文件](http://www.tuicool.com/articles/BJfUn2B)  
+[git commit -m 与 git commit -am 的区别](https://segmentfault.com/q/1010000005900988)  
 
 

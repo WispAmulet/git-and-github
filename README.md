@@ -1,6 +1,5 @@
 # git-and-github
-如何使用git上传项目到github
-=
+## 如何使用git上传项目到github
 
 1. **安装git客户端**
 
@@ -32,9 +31,7 @@ Settings -> SSH and GPG keys -> New SSH key -> 将上一步id_rsa.pub中的文�
 
 7. **建立本地仓库**
 
-打开git界面使用 $ cd 命令切换到项目目录的地址
-
-或者直接在项目目录中右键 Git Bash Here
+打开git界面使用 $ cd 命令切换到项目目录的地址或者直接在项目目录中右键 Git Bash Here
 
     $ git init
     项目中多了一个.git隐藏文件夹<br>
@@ -84,5 +81,13 @@ git默认对文件大小写不敏感，使用
 [Git学习版本回退和管理文件的修改及删除操作](https://my.oschina.net/u/1471093/blog/353710)  
 [Git删除暂存区或版本库中的文件](http://www.tuicool.com/articles/BJfUn2B)  
 [git commit -m 与 git commit -am 的区别](https://segmentfault.com/q/1010000005900988)  
+
+## 如何使用Markdown语言
+
+- 参考资料：
+
+[Markdown: Basics （快速入门）](http://wowubuntu.com/markdown/basic.html)  
+[Markdown 语法说明 (简体中文版) ](http://wowubuntu.com/markdown/index.html)
+
 
 

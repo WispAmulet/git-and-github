@@ -26,9 +26,7 @@
     
 5. **为github配置SSH key**
 
-Settings -> SSH and GPG keys -> New SSH key -> 
-
-将上一步id_rsa.pub中的文字复制到Key -> Add SSH key
+Settings -> SSH and GPG keys -> New SSH key -> 将上一步id_rsa.pub中的文字复制到Key -> Add SSH key
 
 6. **在本地创建项目目录**
 
@@ -40,8 +38,10 @@ Settings -> SSH and GPG keys -> New SSH key ->
 
     $ git init
     项目中多了一个.git隐藏文件夹<br>
+    
     $ git add .
     将所有文件添加到仓库<br>
+    
     $ git commit -m "your commit"
     把文件提交到仓库
 
@@ -53,7 +53,9 @@ Settings -> SSH and GPG keys -> New SSH key ->
     
 9. **上传本地文件**
 
-    git push -u origin master
+使用git push命令
+
+    $ git push -u origin master
     注意：空文件夹不会显示
   
 10. **如何更新项目**
@@ -70,7 +72,17 @@ git默认对文件大小写不敏感，使用
 
     $ git config core.ignorecase false
 
-参考资料：<br><a href="http://blog.csdn.net/ch1451082329/article/details/52780175">github入门到上传本地项目</a><br>
-<a href="http://www.tuicool.com/articles/AnimaaE">如何配置Git支持大小写敏感和修改文件名中大小写字母</a>
+- 参考资料：
 
-更多资料: <br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的Git教程</a><br><a href="https://my.oschina.net/u/1471093/blog/353710">Git学习版本回退和管理文件的修改及删除操作</a><br><a href="http://www.tuicool.com/articles/BJfUn2B">Git删除暂存区或版本库中的文件</a><br><a href="https://segmentfault.com/q/1010000005900988">git commit -m 与 git commit -am 的区别</a>
+[github入门到上传本地项目](http://blog.csdn.net/ch1451082329/article/details/52780175)
+[如何配置Git支持大小写敏感和修改文件名中大小写字母](http://www.tuicool.com/articles/AnimaaE)
+
+
+- 更多资料: 
+
+[廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+[Git学习版本回退和管理文件的修改及删除操作](https://my.oschina.net/u/1471093/blog/353710)
+[Git删除暂存区或版本库中的文件](http://www.tuicool.com/articles/BJfUn2B)
+[git commit -m 与 git commit -am 的区别](https://segmentfault.com/q/1010000005900988)
+
+

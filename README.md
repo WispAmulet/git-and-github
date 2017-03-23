@@ -1,66 +1,74 @@
 # git-and-github
 如何使用git上传项目到github
+=
 
-<b>1.安装git客户端</b> <br> <a href="https://git-scm.com/">https://git-scm.com/</a>
+1. **安装git客户端**
 
-<b>2.在github上创建一个repository</b> <br> 注意：名字最好为英文
+[https://git-scm.com/](https://git-scm.com/)
+  
+2. **在github上创建一个repository**
 
-<b>3.打开git客户端</b>，首次登陆使用 <br>
-  <pre>
-  $ git config --global user.name "your user name" <br>
-  $ git config --global user.email "your email address"
-  </pre>
+注意：名字最好为英文
 
-<b>4.设置SSH key</b> <br><br>
-  可以在C:\Users\your user name\\.ssh中找到SSH key，没有的话使用
-  <pre>
-  $ ssh-keygen -t rsa -C "your email address"
-  </pre>
-  
-  生成key。然后用记事本打开id_rsa.pub <br>
-  
-<b>5.为github配置SSH key</b> <br><br>
-  Settings -> SSH and GPG keys -> New SSH key -> <br><br>
-  将上一步id_rsa.pub中的文字复制到Key -> Add SSH key
-  
-<b>6.在本地创建项目目录</b>
+3. **打开git客户端**
 
-<b>7.建立本地仓库</b> <br><br>
-  打开git界面使用 $ cd 命令切换到项目目录的地址 <br>
-  或者直接在项目目录中右键 Git Bash Here
-  <pre>
-  $ git init
-  项目中多了一个.git隐藏文件夹<br>
-  $ git add .
-  将所有文件添加到仓库<br>
-  $ git commit -m "your commit"
-  把文件提交到仓库
-  </pre>
+首次登陆使用
+
+    $ git config --global user.name "your user name" <br>
+    $ git config --global user.email "your email address"
+    
+4. **设置SSH key**
+
+可以在C:\Users\your user name\\.ssh中找到SSH key，没有的话使用
+
+    $ ssh-keygen -t rsa -C "your email address"    
+生成key。然后用记事本打开id_rsa.pub
+    
+5. **为github配置SSH key**
+
+Settings -> SSH and GPG keys -> New SSH key -> 
+
+将上一步id_rsa.pub中的文字复制到Key -> Add SSH key
+
+6. **在本地创建项目目录**
+
+7. **建立本地仓库**
+
+打开git界面使用 $ cd 命令切换到项目目录的地址
+
+或者直接在项目目录中右键 Git Bash Here
+
+    $ git init
+    项目中多了一个.git隐藏文件夹<br>
+    $ git add .
+    将所有文件添加到仓库<br>
+    $ git commit -m "your commit"
+    把文件提交到仓库
+
+8. **关联github仓库**
+
+在之前创建的repo中找到SSH地址
+
+    $ git remote add origin git@github.com:your ID/your repo name.git
+    
+9. **上传本地文件**
+
+    git push -u origin master
+    注意：空文件夹不会显示
   
-<b>8.关联github仓库</b> <br><br>
-  在之前创建的repo中找到SSH地址 <br>
-  <pre>
-  $ git remote add origin git@github.com:your ID/your repo name.git
-  </pre>
-  
-<b>9.上传本地文件</b> <br>
-  <pre>
-  git push -u origin master
-  </pre>
-  注意：空文件夹不会显示
-  
-<b>10.如何更新项目</b> <br><br>
-  在本地项目中创建一个文件，如 readme.txt
-  <pre>
-  $ git add readme.txt
-  $ git commit -m "add a file"
-  $ git push
-  </pre>
-  
-<b>其它：</b> <br> git默认对文件大小写不敏感，使用
-  <pre>
-  $ git config core.ignorecase false
-  </pre>
+10. **如何更新项目**
+
+在本地项目中创建一个文件，如 readme.txt
+
+    $ git add readme.txt
+    $ git commit -m "add a file"
+    $ git push
+
+- 其它
+
+git默认对文件大小写不敏感，使用
+
+    $ git config core.ignorecase false
 
 参考资料：<br><a href="http://blog.csdn.net/ch1451082329/article/details/52780175">github入门到上传本地项目</a><br>
 <a href="http://www.tuicool.com/articles/AnimaaE">如何配置Git支持大小写敏感和修改文件名中大小写字母</a>

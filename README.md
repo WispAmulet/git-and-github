@@ -57,6 +57,8 @@
   
 10. **如何更新项目**
 
+> [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+
     在本地项目中创建一个文件，如 readme.txt
 
         $ git add readme.txt

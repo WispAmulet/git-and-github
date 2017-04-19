@@ -91,5 +91,33 @@
   [Markdown: Basics （快速入门）](http://wowubuntu.com/markdown/basic.html)  
   [Markdown 语法说明 (简体中文版) ](http://wowubuntu.com/markdown/index.html)
 
+## 3. 使用VS code管理git
 
+1. 创建远程仓库
 
+2. 用VS code打开工程文件夹 -> 
+
+   源控件（ctrl+shift+G） -> 初始化存储库 -> 
+   
+   创建了本地仓库，目录下自动生成了.git文件夹，左侧提示可以看到有多少项更改。下方输出区可以看到git操作的信息。
+
+3. 暂存所有更改 -> 输入消息 -> 提交 ->
+
+   ctrl+shift+P 快捷键可以打开命令面板
+
+4. 在git bash中输入
+
+   ```git
+   git remote add origin 远程仓库地址
+   git pull origin master
+   ```
+
+   相当于把本地仓库与远程仓库连接起来了 -> 可以看到.git文件夹里的config文件中多了远程仓库的地址
+
+   直接push应该也行(？)
+
+5. 发布 -> 选择origin
+
+6. 当文件有更改时，源控件会提示 -> 执行第2步 -> 执行第5步 -> 成功！
+
+7. 对于现有的repo，直接用VS code打开文件夹 -> 左侧提示有更改 -> 执行第2步 -> 执行第5步 -> 成功！

@@ -1,4 +1,4 @@
-# git-and-github
+# 想到什么写什么...
 ## 1. 如何使用git上传项目到github
 
 1. **安装git客户端**
@@ -13,14 +13,19 @@
 
    首次登陆使用
    
-       $ git config --global user.name "your user name" <br>
-       $ git config --global user.email "your email address"
+   ```command
+   $ git config --global user.name "your user name" <br>
+   $ git config --global user.email "your email address"
+   ```
     
 4. **设置SSH key**
 
    可以在C:\Users\your user name\\.ssh中找到SSH key，没有的话使用
-
-       $ ssh-keygen -t rsa -C "your email address"    
+   
+   ```command
+   $ ssh-keygen -t rsa -C "your email address"    
+   ```
+   
    生成key。然后用记事本打开id_rsa.pub
     
 5. **为github配置SSH key**
@@ -33,43 +38,53 @@
 
    打开git界面使用 $ cd 命令切换到项目目录的地址或者直接在项目目录中右键 Git Bash Here
    
-       $ git init
-       项目中多了一个.git隐藏文件夹<br>
+   ```command
+   $ git init
+   项目中多了一个.git隐藏文件夹<br>
     
-       $ git add .
-       将所有文件添加到仓库<br>
+   $ git add .
+   将所有文件添加到仓库<br>
     
-       $ git commit -m "your commit"
-       把文件提交到仓库
+   $ git commit -m "your commit"
+   把文件提交到仓库
+   ```
 
 8. **关联github仓库**
 
    在之前创建的repo中找到SSH地址
-
-       $ git remote add origin git@github.com:your ID/your repo name.git
+   
+   ```command
+   $ git remote add origin git@github.com:your ID/your repo name.git
+   ```
     
 9. **上传本地文件**
 
    使用git push命令
-
-       $ git push -u origin master
-       注意：空文件夹不会显示
+   
+   ```command
+   $ git push -u origin master
+   注意：空文件夹不会显示
+   ```
   
 10. **如何更新项目**
 
-> [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+    > [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 
     在本地项目中创建一个文件，如 readme.txt
-
-        $ git add readme.txt
-        $ git commit -m "add a file"
-        $ git push
+    
+    ```command
+    $ git add readme.txt
+    $ git commit -m "add a file"
+    $ git push
+    ```
 
 - 其它
 
   git默认对文件大小写不敏感，使用
-
-      $ git config core.ignorecase false
+  
+  ```command
+  $ git config core.ignorecase false
+  ```
 
 - 参考资料：
 
@@ -123,3 +138,15 @@
 6. 当文件有更改时，源控件会提示 -> 执行第2步 -> 执行第5步 -> 成功！
 
 7. 对于现有的repo，直接用VS code打开文件夹 -> 左侧提示有更改 -> 执行第2步 -> 执行第5步 -> 成功！
+
+## 4 把Sublime加入右键菜单快速打开文件（就像Notepad++那样）
+
+1. win+R打开运行，输入regedit打开注册表编辑器
+
+2. 找到 计算机\HKEY_CLASSES\_ROOT\*\shell，在目录下新建项，项名即为右键菜单中将会显示的文字，如 Edit with Sublime Text 3
+
+3. 在右方区域新建 字符串值，名字为 Icon，值为 sublime_txt.exe的路径,0
+
+4. 在之前新建的项中继续新建项，名字为command，修改默认值的数据为 sublime_txt.exe的路径 %1
+
+5. OK！

@@ -1,5 +1,5 @@
 # git and note...
-## 1. 如何使用git上传项目到github
+## 1. 使用git上传项目到github
 
 1. 安装git客户端
 
@@ -99,7 +99,7 @@
   [Git删除暂存区或版本库中的文件](http://www.tuicool.com/articles/BJfUn2B)  
   [git commit -m 与 git commit -am 的区别](https://segmentfault.com/q/1010000005900988)  
 
-## 2. 如何使用Markdown语言
+## 2. 使用Markdown语言
 
 - 参考资料：
 
@@ -151,7 +151,7 @@
 
 5. OK！
 
-## 5. 如何使用Sass
+## 5. 使用Sass
 
 > [参考手册](http://sass.bootcss.com/docs/sass-reference/)
 
@@ -161,59 +161,97 @@
 
 2. 打开 Start Command Prompt with Ruby，安装Sass
 
-```command
-gem install sass
-```
+   ```command
+   gem install sass
+   ```
 
 3. 切换到目录文件，如
 
-```command
-cd \workspace\project\css
-```
+   ```command
+   cd \workspace\project\css
+   ```
 
 4. 新建样式表文件，如`style.scss`s或`style.sass`（只是语法不同，而且可以互相转换）
 
-> [SCSS 与 Sass 异同](http://sass.bootcss.com/docs/scss-for-sass-users/)
+   > [SCSS 与 Sass 异同](http://sass.bootcss.com/docs/scss-for-sass-users/)
 
-> [Sass 与 SCSS 是什么关系？](https://segmentfault.com/a/1190000005646206)
+   > [Sass 与 SCSS 是什么关系？](https://segmentfault.com/a/1190000005646206)
 
-```command
-# 将 Sass 转换为 SCSS
-sass-convert style.sass style.scss
+   ```command
+   # 将 Sass 转换为 SCSS
+   sass-convert style.sass style.scss
 
-# 将 SCSS 转换为 Sass
-sass-convert style.scss style.sass
-```
+   # 将 SCSS 转换为 Sass
+   sass-convert style.scss style.sass
+   ```
 
 5. 转换到`css`
 
-```command
-sass input.scss output.css
-```
+   ```command
+   sass input.scss output.css
+   ```
 
    编译后的`css`文件有四个风格可选
 
-```command
-nested：嵌套缩进的css代码，它是默认值。
-expanded：没有缩进的、扩展的css代码。
-compact：简洁格式的css代码。
-compressed：压缩后的css代码。
-```
+   ```command
+   nested：嵌套缩进的css代码，它是默认值。
+   expanded：没有缩进的、扩展的css代码。
+   compact：简洁格式的css代码。
+   compressed：压缩后的css代码。
+   ```
 
-```command
-sass --style compressed input.scss output.css
-```
+   ```command
+   sass --style compressed input.scss output.css
+   ```
 
    监视SCSS文件
 
-```command
-sass --watch input.scss:output.css
-```
+   ```command
+   sass --watch input.scss:output.css
+   ```
 
 6. 源文件中的中文出现乱码怎么解决
 
-   进入这个目录`C:\Ruby\lib\ruby\gems\1.9.1\gems\sass-3.3.14\lib\sass`，找到`engine.rb`文件，添加`Encoding.default_external = Encoding.find('utf-8')`。放在所有的`require XXX`后即可。
+   进入目录`C:\Ruby\lib\ruby\gems\1.9.1\gems\sass-3.3.14\lib\sass`，找到`engine.rb`文件，添加`Encoding.default_external = Encoding.find('utf-8')`。放在所有的`require XXX`后即可。
 
 7. 常用的功能（带截图）
 
-> [使用scss來加速寫css吧!](http://blog.visioncan.com/2011/sass-scss-your-css/)
+   > [使用scss來加速寫css吧!](http://blog.visioncan.com/2011/sass-scss-your-css/)
+
+## 6. 使用Gulp
+
+   > [Getting Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+
+   > [Gulp：任务自动管理工具](http://javascript.ruanyifeng.com/tool/gulp.html)
+
+   > [gulp中文入门教程](http://www.tangshuang.net/3126.html#title-3-2)
+
+   暂时方案：
+
+   1. > [Starter for HTML/CSS/JS projects](https://github.com/cssanimation/gulp-sass-starter?mc_cid=0da21c25f1&mc_eid=4b3f64ff15)
+      
+      先下载这个文件夹作为工程初始文件夹。
+
+   2. 运行
+
+      ```command
+      npm install --global gulp-cli
+      ```
+
+   3. 使用 [淘宝 NPM 镜像](https://npm.taobao.org/)
+
+      ```command
+      npm install -g cnpm --registry=https://registry.npm.taobao.org
+      ```
+
+      切换到目录
+
+      ```command
+      cnpm install
+      ```
+
+      执行`gulpfile.js`
+
+      ```command
+      gulp
+      ```

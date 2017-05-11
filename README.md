@@ -264,8 +264,6 @@
    
    它可以让git忽略指定的文件或文件夹，比如`node_modules`文件夹，它不应该出现在一个工程里（除了在自己的本地环境时）。
 
-   这里有一个模板库 > [gitignore](https://github.com/github/gitignore)
-
    ```
    node_modules/
    .vscode/
@@ -278,3 +276,5 @@
    ```
 
    带`.`表示一个文件，反之代表文件夹，加上`/`更容易理解，表示一个路径，`*`表示所有。
+
+   > [这里有一个模板库](https://github.com/github/gitignore)

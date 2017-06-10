@@ -145,7 +145,7 @@
 
 1. win+R打开运行，输入regedit打开注册表编辑器
 
-2. 找到 计算机\HKEY_CLASSES\_ROOT\*\shell，在目录下新建项，项名即为右键菜单中将会显示的文字，如 Edit with Sublime Text 3
+2. 找到 计算机\HKEY_CLASSES\_ROOT\\*\shell，在目录下新建项，项名即为右键菜单中将会显示的文字，如 Edit with Sublime Text 3
 
 3. 在右方区域新建 字符串值，名字为 Icon，值为 sublime_txt.exe的路径,0
 
@@ -278,3 +278,13 @@
    带`.`表示一个文件，反之代表文件夹，加上`/`更容易理解，表示一个路径，`*`表示所有。
 
    > [这里有一个模板库](https://github.com/github/gitignore)
+
+## 8. 将cmder.exe加入右键菜单
+
+   1. 把`cmder`加到环境变量：可以把`Cmder.exe`存放的目录添加到系统环境变量；加完之后，`Win+r`一下输入`cmder`，即可。
+
+   2. 添加`cmder`到右键菜单：在某个文件夹中打开终端，这个是一个(超级)痛点需求，实际上上一步的把`cmder`加到环境变量就是为此服务的，在管理员权限的终端输入以下语句即可：
+
+   ```command
+   Cmder.exe /REGISTER ALL
+   ```

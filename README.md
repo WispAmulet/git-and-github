@@ -293,18 +293,17 @@
    
    3. 修改`powershell`中的`λ`符号，打开`<cmder_dir>\vendor\profile.ps1`。
    
-   
-   ```ps1
-   [ScriptBlock]$Prompt = { #line 168
-       $realLASTEXITCODE = $LASTEXITCODE
-       $host.UI.RawUI.WindowTitle = Microsoft.PowerShell.Management\Split-Path $pwd.ProviderPath -Leaf
-       PrePrompt | Microsoft.PowerShell.Utility\Write-Host -NoNewline
-       CmderPrompt
-       Microsoft.PowerShell.Utility\Write-Host "`nλ " -NoNewLine -ForegroundColor "DarkGray" ### this is my edit
-       PostPrompt | Microsoft.PowerShell.Utility\Write-Host -NoNewline
-       $global:LASTEXITCODE = $realLASTEXITCODE
-       return " "
-   }
-   ```
+```ps1
+[ScriptBlock]$Prompt = { #line 168
+    $realLASTEXITCODE = $LASTEXITCODE
+    $host.UI.RawUI.WindowTitle = Microsoft.PowerShell.Management\Split-Path $pwd.ProviderPath -Leaf
+    PrePrompt | Microsoft.PowerShell.Utility\Write-Host -NoNewline
+    CmderPrompt
+    Microsoft.PowerShell.Utility\Write-Host " PS> " -NoNewLine -ForegroundColor "DarkGray" ### this is my edit
+    PostPrompt | Microsoft.PowerShell.Utility\Write-Host -NoNewline
+    $global:LASTEXITCODE = $realLASTEXITCODE
+    return " "
+}
+```
    
    > [source](https://i-py.com/2017/cmder-lambda-update/)

@@ -292,6 +292,7 @@
    > [source](https://segmentfault.com/a/1190000004408436)
    
    3. 修改`powershell`中的`λ`符号，打开`<cmder_dir>\vendor\profile.ps1`。
+   
    
    ```ps1
    [ScriptBlock]$Prompt = { #line 168

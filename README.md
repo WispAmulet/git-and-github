@@ -293,7 +293,7 @@
    
    3. 修改`powershell`中的`λ`符号，打开`<cmder_dir>\vendor\profile.ps1`
    
-   ```shell
+   ```ps1
    [ScriptBlock]$Prompt = { #line 168
        $realLASTEXITCODE = $LASTEXITCODE
        $host.UI.RawUI.WindowTitle = Microsoft.PowerShell.Management\Split-Path $pwd.ProviderPath -Leaf
@@ -305,3 +305,5 @@
        return " "
    }
    ```
+   
+   > [source](https://i-py.com/2017/cmder-lambda-update/)

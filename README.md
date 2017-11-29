@@ -4,7 +4,7 @@
 1. 安装git客户端
 
    [https://git-scm.com/](https://git-scm.com/)
-  
+
 2. 在github上创建一个repository
 
    注意：名字最好为英文
@@ -12,22 +12,22 @@
 3. 打开git客户端
 
    首次登陆使用
-   
+
    ```command
    $ git config --global user.name "your user name" <br>
    $ git config --global user.email "your email address"
    ```
-    
+
 4. 设置SSH key
 
    可以在C:\Users\your user name\\.ssh中找到SSH key，没有的话使用
-   
+
    ```command
-   $ ssh-keygen -t rsa -C "your email address"    
+   $ ssh-keygen -t rsa -C "your email address"
    ```
-   
+
    生成key。然后用记事本打开id_rsa.pub
-    
+
 5. 为github配置SSH key
 
    Settings -> SSH and GPG keys -> New SSH key -> 将上一步id_rsa.pub中的文字复制到Key -> Add SSH key
@@ -37,14 +37,14 @@
 7. 建立本地仓库
 
    打开git界面使用 $ cd 命令切换到项目目录的地址或者直接在项目目录中右键 Git Bash Here
-   
+
    ```command
    $ git init
    项目中多了一个.git隐藏文件夹<br>
-    
+
    $ git add .
    将所有文件添加到仓库<br>
-    
+
    $ git commit -m "your commit"
    把文件提交到仓库
    ```
@@ -52,26 +52,26 @@
 8. 关联github仓库
 
    在之前创建的repo中找到SSH地址
-   
+
    ```command
    $ git remote add origin git@github.com:your ID/your repo name.git
    ```
-    
+
 9. 上传本地文件
 
    使用git push命令
-   
+
    ```command
    $ git push -u origin master
    注意：空文件夹不会显示
    ```
-  
+
 10. 如何更新项目
 
     > [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 
     在本地项目中创建一个文件，如 readme.txt
-    
+
     ```command
     $ git add readme.txt
     $ git commit -m "add a file"
@@ -81,23 +81,23 @@
 - 其它
 
   git默认对文件大小写不敏感，使用
-  
+
   ```command
   $ git config core.ignorecase false
   ```
 
 - 参考资料：
 
-  [github入门到上传本地项目](http://blog.csdn.net/ch1451082329/article/details/52780175)  
+  [github入门到上传本地项目](http://blog.csdn.net/ch1451082329/article/details/52780175)
   [如何配置Git支持大小写敏感和修改文件名中大小写字母](http://www.tuicool.com/articles/AnimaaE)
 
 
-- 更多资料: 
+- 更多资料:
 
-  [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)  
-  [Git学习版本回退和管理文件的修改及删除操作](https://my.oschina.net/u/1471093/blog/353710)  
-  [Git删除暂存区或版本库中的文件](http://www.tuicool.com/articles/BJfUn2B)  
-  [git commit -m 与 git commit -am 的区别](https://segmentfault.com/q/1010000005900988)  
+  [廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+  [Git学习版本回退和管理文件的修改及删除操作](https://my.oschina.net/u/1471093/blog/353710)
+  [Git删除暂存区或版本库中的文件](http://www.tuicool.com/articles/BJfUn2B)
+  [git commit -m 与 git commit -am 的区别](https://segmentfault.com/q/1010000005900988)
 
 ## 2. 使用Markdown语言
 
@@ -105,17 +105,17 @@
 
 - 参考资料：
 
-  [Markdown: Basics （快速入门）](http://wowubuntu.com/markdown/basic.html)  
+  [Markdown: Basics （快速入门）](http://wowubuntu.com/markdown/basic.html)
   [Markdown 语法说明 (简体中文版) ](http://wowubuntu.com/markdown/index.html)
 
 ## 3. 使用VS code管理git
 
 1. 创建远程仓库
 
-2. 用VS code打开工程文件夹 -> 
+2. 用VS code打开工程文件夹 ->
 
-   源控件（ctrl+shift+G） -> 初始化存储库 -> 
-   
+   源控件（ctrl+shift+G） -> 初始化存储库 ->
+
    创建了本地仓库，目录下自动生成了.git文件夹，左侧提示可以看到有多少项更改。下方输出区可以看到git操作的信息。
 
 3. 暂存所有更改 -> 输入消息 -> 提交 ->
@@ -231,7 +231,7 @@
    暂时方案：
 
    1. > [Starter for HTML/CSS/JS projects](https://github.com/cssanimation/gulp-sass-starter?mc_cid=0da21c25f1&mc_eid=4b3f64ff15)
-      
+
       先下载这个文件夹作为工程初始文件夹。
 
    2. 运行
@@ -261,7 +261,7 @@
 ## 7. 添加.gitignore文件
 
    不要忘记为自己的工程添加`README.md`，同时也不要忘记了`.gitignore`🙄。注意：文件名为空，后缀为`git`和`ignore`组成。
-   
+
    它可以让git忽略指定的文件或文件夹，比如`node_modules`文件夹，它不应该出现在一个工程里（除了在自己的本地环境时）。
 
    ```
@@ -290,9 +290,9 @@
    ```
 
    > [source](https://segmentfault.com/a/1190000004408436)
-   
+
    3. 修改`powershell`中的`λ`符号，打开`<cmder_dir>\vendor\profile.ps1`。把`λ`修改为其它符号。
-   
+  
 ```ps1
 [ScriptBlock]$Prompt = { #line 168
     $realLASTEXITCODE = $LASTEXITCODE
@@ -305,5 +305,34 @@
     return " "
 }
 ```
-   
+
    > [source](https://i-py.com/2017/cmder-lambda-update/)
+
+## 9. 查找已安装的 package
+
+   1. 查找当前目录下的 package
+   ```command
+   C:\workspace\demo-express
+   npm list
+
+   demo-express@0.0.1 C:\workspace\demo-express
+   `-- express@4.16.2
+     +-- accepts@1.3.4
+     | +-- mime-types@2.1.17
+     | | `-- mime-db@1.30.0
+     | `-- negotiator@0.6.1
+     +-- array-flatten@1.1.1
+     +-- body-parser@1.18.2
+     ...
+     ...
+   ```
+
+   2. 查找全局安装的 package
+   ```command
+   npm list -g
+   ```
+
+   3. 以上的命令会列出 package 下的各种依赖，看起来非常不直观。可以使用以下命令。
+   ```command
+   npm list -g --depth=0
+   ```

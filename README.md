@@ -338,3 +338,65 @@
    ```
 
 ## 10. 更换电脑之后如何继续使用 Github 上的 repo?
+
+
+## 11. 在 Windows 10 上使用 WSL (Windows Subsystem Linux)
+
+   1. 在 PowerShell 中输入
+   ```powershell
+   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+   ```
+
+   2. 在 Windows Store 中安装你喜欢的 Linux 系统
+
+   3. 在 cmd 或 PowerShell 中输入 `bash` 进入 Linux 环境
+
+   > [source](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+
+   4. 安装 curl, npm, git, zsh, oh-my-zsh...
+   ```bash
+   $ sudo apt-get update
+   $ sudo apt-get install -y curl
+
+   $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+   $ sudo apt-get install -y nodejs
+
+   $ sudo apt-get install -y git
+
+   $ sudo apt-get install -y zsh
+
+   $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+   ```
+
+   5. 访问 Windows 目录
+   ```bash
+   $ cd /mnt/c
+   ```
+
+   6. 设置 alias
+   ```bash
+   # 1
+   $ vi .bashrc
+
+   # 确认文件中有以下代码
+   if [ -f ~/.bash_aliases ]; then
+     . ~/.bash_aliases
+   fi
+
+   # 2
+   $ vi .bash_aliases
+
+   # 添加如下代码
+   alias wp='cd /mnt/c/workspace'
+
+   # 3
+   $ source .bash_aliases
+
+   # 4 让 alias 在 zsh 中也可以使用
+   $ vi .zshrc
+
+   #添加如下代码
+   source ~/.bash_aliases
+
+   # Done!
+   ```
